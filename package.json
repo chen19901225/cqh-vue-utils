@@ -3,6 +3,10 @@
 	"displayName": "cqh-vue-utils",
 	"description": "y",
 	"version": "0.0.1",
+	"publisher": "cqh",
+	"repository": {
+		"url": "https://github.com/chen19901225/cqh-vue-utils",
+	},
 	"engines": {
 		"vscode": "^1.58.0"
 	},
@@ -10,16 +14,25 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:cqh-vue-utils.helloWorld"
+		"*"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "cqh-vue-utils.helloWorld",
-				"title": "Hello World"
+				"command": "cqh-vue-utils.export_var_to_return",
+				"title": "export_var_to_return"
 			}
 		],
+		"menus": {
+            "editor/context": [
+                {
+                    "when": "!inOutput && editorTextFocus && resourceExtname  == .vue && editorHasSelection",
+                    "command": "cqh-vue-utils.export_var_to_return",
+                    "group": "cqh-vue-utils"
+                }
+            ]
+        },
 		"snippets": [
             {
                 "language": "vue",
