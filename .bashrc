@@ -1,0 +1,1 @@
+source ~/envs/default/bin/activate

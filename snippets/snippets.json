@@ -1,0 +1,12 @@
+{
+    "export_return": {
+		"prefix": "export_return",
+		"body": [
+			"// __export__",
+			"return {",
+			"}",
+            "// __end_export__"
+		],
+		"description": "proper get"
+	}
+}
