@@ -38,7 +38,7 @@ export async function export_var_to_return(textEditor: vscode.TextEditor, edit: 
         ident + "}",
         ident + "// __end_export__"
     )
-    let new_middle_part = new_middle_part_list.join(os.EOL)
+    let new_middle_part = os.EOL +new_middle_part_list.join(os.EOL) +os.EOL
     let new_content = first_part + new_middle_part + end_part
     fs.writeFileSync(current_path, new_content, 'utf-8')
     vscode.window.showInformationMessage(`变量[${export_var}]导出成功`);
